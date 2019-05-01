@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>DUNYA'S RPSBOT</title>
+    <a href="http://localhost:4000/randombot"></a>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+      Rock Paper Scissors
+      <a href="http://localhost:4000/" style="color:#A9A9A9" title="Home" class="fas fa-home fa-2x"></a>
+      </a>
+    </nav>
+    <br>
+    <div class="container-fluid">
+      <p>You are playing with <font color="red">{{ bot_type }}</font>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
+    </div>
+
+    <div class="container-fluid">
+      <p>Choose your <b>throw</b>:</p>
+      <form method="POST" action="/smartbot">
+        <input type="submit" class="btn btn-outline-primary btn-lg" name="player_throw" value="rock 🤘">
+        <input type="submit" class="btn btn-outline-primary btn-lg" name="player_throw" value="paper 🧻">
+        <input type="submit" class="btn btn-outline-primary btn-lg" name="player_throw" value="scissors ✂️">
+      </form>
+    </div>
+
+    {% if game %}
+    <br>
+    <div class="container-fluid">
+      <p>You threw: <font color="blue">{{ game['player'] }}</font></p>
+      <p>Bot threw: <font color="orange">{{ game['bot'] }}</font></p>
+      <p>Game outcome: <font color="green">{{ game['result'] }}</font></p>
+    </div>
+    <div class="alert alert-secondary" role="alert">
+      <font color="black"><h4>Tally</h4></font>
+      <p><font color="black">You played <b>{{ game['games_played'] }}</b> games.</font></p>
+      <p><button type="button" class="btn btn-success">
+            games won 👍 <span class="badge badge-light btn-lg">{{ game['won'] }}</span>
+            <span class="sr-only">games won</span>
+          </button>
+          <button type="button" class="btn btn-danger">
+            games lost 👎 <span class="badge badge-light btn-lg">{{ game['lost'] }}</span>
+            <span class="sr-only">games won</span>
+      </button></p>
+      <font color="black">Your win rate is <b>{{ game['win_rate'] }}</b>%</font>.
+    </div>
+    {% endif %}
+
+  </body>
+</html>
