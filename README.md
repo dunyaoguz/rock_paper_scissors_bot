@@ -8,5 +8,5 @@ The bot was built atop two components:
 Players are encouraged to compare the performance of the intelligent bot with the random bot which picks rock, paper or scissors with 1/3 probability.
 
 <img src="demo_1.png" alt="dt" width="300"/>
-<img src="demo_2.png" alt="dt" width="500"/>
+<img src="demo_2.png" alt="dt" width="400"/>
 
