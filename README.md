@@ -1,7 +1,7 @@
 # rock_paper_scissors_bot
 A machine learning trained RPS bot 
 
-![png](demo_1.png)
+<img src="demo_1.png" alt="dt" width="300"/>
 
-![png](demo_2.png)
+<img src="demo_2.png" alt="dt" width="700"/>
 
