@@ -7,6 +7,11 @@ The bot was built atop two components:
 
 Players are encouraged to compare the performance of the intelligent bot with the random bot which picks rock, paper or scissors with 1/3 probability.
 
+How to play:
+1. Download this repository
+2. Open terminal, cd to rock_paper_scissors_bot
+3. Run `python app.py local`
+
 <img src="demo_1.png" alt="dt" width="300"/>
 <img src="demo_2.png" alt="dt" width="400"/>
 
